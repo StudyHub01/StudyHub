@@ -1,1 +1,1 @@
-# studyHub.be
+# StudyHub
