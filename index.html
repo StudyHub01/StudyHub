@@ -545,6 +545,15 @@ textarea.finput{resize:vertical;min-height:80px;margin-bottom:0;}
       </div>
     </div>
     <div class="form-row full"><div class="form-group"><label class="flabel">Description</label><textarea class="finput" id="hwDesc" placeholder="Chapitres concernés, consignes…" style="min-height:70px;"></textarea></div></div>
+    <div class="form-row full"><div class="form-group">
+      <label class="flabel">Fichier joint (optionnel)</label>
+      <div class="drop-zone" id="hwDropZone" style="padding:14px;text-align:center;cursor:pointer;" onclick="document.getElementById('hwFileInput').click()" ondragover="dzOver(event)" ondragleave="dzLeave()" ondrop="hwDzDrop(event)">
+        <div style="font-size:22px;margin-bottom:4px" id="hwDropIcon">📎</div>
+        <div style="font-size:13px;font-weight:700;color:var(--muted2)" id="hwDropTitle">Déposer un fichier ou cliquer</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px" id="hwDropSub">PDF, images, documents…</div>
+      </div>
+      <input type="file" id="hwFileInput" style="display:none" accept=".pdf,.png,.jpg,.jpeg,.docx,.pptx" onchange="hwOnFileSelect(event)">
+    </div></div>
     <div class="btn-row">
       <button class="btn btn-accent" onclick="submitHw()">✨ Ajouter à l'agenda</button>
       <button class="btn btn-ghost" onclick="closeOverlay('addHwOverlay')">Annuler</button>
@@ -1136,6 +1145,7 @@ function renderUpcoming(){
       <div class="upcoming-info">
         <div class="upcoming-title">${HW_TYPE_EMOJI[h.type]||'📌'} ${h.title}</div>
         <div class="upcoming-meta">📌 ${h.subject||'Général'} · ${HW_TYPE_LABEL[h.type]||'Devoir'}${h.description?` · ${h.description.slice(0,40)}${h.description.length>40?'…':''}`:''}</div>
+        ${h.file_url?`<a href="${h.file_url}" target="_blank" style="font-size:11px;color:var(--accent);text-decoration:none;font-weight:700;">📎 Fichier joint ↗</a>`:''}
       </div>
       ${pill}
       ${role==='admin'?`<button class="upcoming-del" onclick="deleteHw(${h.id})">🗑</button>`:''}
@@ -1157,10 +1167,24 @@ function showHwDetail(id){
 }
 
 // ADD HW
+let hwSelectedFile=null;
+function hwOnFileSelect(e){if(e.target.files.length)hwApplyFile(e.target.files[0]);}
+function hwDzDrop(e){e.preventDefault();dzLeave();if(e.dataTransfer.files.length)hwApplyFile(e.dataTransfer.files[0]);}
+function hwApplyFile(file){
+  hwSelectedFile=file;
+  document.getElementById('hwDropIcon').textContent='✅';
+  document.getElementById('hwDropTitle').textContent=file.name;
+  document.getElementById('hwDropSub').textContent=(file.size/1024).toFixed(1)+' Ko';
+}
 function openAddHwModal(){
   ['hwTitle','hwSubject','hwDesc'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('hwDate').value=new Date().toISOString().split('T')[0];
   document.getElementById('hwType').value='homework';
+  hwSelectedFile=null;
+  document.getElementById('hwDropIcon').textContent='📎';
+  document.getElementById('hwDropTitle').textContent='Déposer un fichier ou cliquer';
+  document.getElementById('hwDropSub').textContent='PDF, images, documents…';
+  document.getElementById('hwFileInput').value='';
   openOverlay('addHwOverlay');
 }
 async function submitHw(){
@@ -1168,10 +1192,20 @@ async function submitHw(){
   const date=document.getElementById('hwDate').value;
   const subject=document.getElementById('hwSubject').value.trim();
   if(!title||!date||!subject){toast('Titre, date et matière requis','error');return;}
+  let file_url=null;
+  if(hwSelectedFile){
+    const ext=hwSelectedFile.name.split('.').pop();
+    const path=`homeworks/${Date.now()}.${ext}`;
+    const {error:upErr}=await sb.storage.from('resources').upload(path,hwSelectedFile,{upsert:true});
+    if(upErr){toast('Erreur upload : '+upErr.message,'error');return;}
+    const {data:urlData}=sb.storage.from('resources').getPublicUrl(path);
+    file_url=urlData.publicUrl;
+  }
   const {data,error}=await sb.from('homeworks').insert([{
     title,due_date:date,subject,
     type:document.getElementById('hwType').value,
     description:document.getElementById('hwDesc').value.trim()||null,
+    file_url,
     added_by:userName,
   }]).select();
   if(error){toast('Erreur : '+error.message,'error');return;}
