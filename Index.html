@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -980,10 +981,11 @@ function renderMobFolderList(){
 }
 function renderBottomNav(){
   const nav=document.getElementById('bottomNav');
-  nav.innerHTML=folders.slice(0,4).map(f=>`
-    <button class="bn-item ${activeFolder===f.id?'active':''}" onclick="selectFolder('${f.id}')">
+  nav.innerHTML=folders.slice(0,3).map(f=>`
+    <button class="bn-item ${activeFolder===f.id&&currentMainTab==='library'?'active':''}" onclick="switchMainTab('library',document.querySelector('.main-tab'));selectFolder('${f.id}')">
       <span class="bn-icon">${f.icon}</span><span class="bn-label">${f.name.length>7?f.name.slice(0,6)+'…':f.name}</span>
     </button>`).join('')
+    +`<button class="bn-item ${currentMainTab==='calendar'?'active':''}" onclick="switchMainTab('calendar',document.querySelectorAll('.main-tab')[1])"><span class="bn-icon">📅</span><span class="bn-label">Agenda</span></button>`
     +`<button class="bn-item" onclick="openDrawer()"><span class="bn-icon">☰</span><span class="bn-label">Plus</span></button>`
     +(role==='admin'
       ?`<button class="bn-item" onclick="openUploadModal()" style="color:var(--accent)"><span class="bn-icon">＋</span><span class="bn-label">Ajouter</span></button>`
@@ -1002,13 +1004,16 @@ function timeAgo(ts){
 function openOverlay(id){document.getElementById(id).classList.add('open');}
 function closeOverlay(id){document.getElementById(id).classList.remove('open');}
 function closeBg(e,id){if(e.target===document.getElementById(id))closeOverlay(id);}
+let currentMainTab='library';
 // ── MAIN TABS
 function switchMainTab(tab, btn){
+  currentMainTab=tab;
   document.querySelectorAll('.main-tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-  btn.classList.add('active');
+  if(btn) btn.classList.add('active');
   document.getElementById('tab-'+tab).classList.add('active');
   if(tab==='calendar') renderCalendar();
+  renderBottomNav();
 }
 
 // ── CALENDAR
