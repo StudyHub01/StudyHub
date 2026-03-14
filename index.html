@@ -3,562 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Best Minecraft Seeds 2026 | Blocks and Biomes</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Blocks and Biomes | Minecraft Guides, Seeds, Mods and Servers</title>
+<meta name="description" content="The best Minecraft guides for 2026. Seeds, mods, servers, builds and tips for Java and Bedrock edition.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#4ade80;--green2:#22c55e;--bg:#0f1117;--bg2:#1a1d27;--bg3:#22263a;
+  --text:#f1f5f9;--text2:#94a3b8;--border:rgba(255,255,255,0.08);
+}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
 
-  :root {
-    --green: #22c55e;
-    --green-dark: #16a34a;
-    --green-light: #dcfce7;
-    --dirt: #92400e;
-    --dirt-light: #fef3c7;
-    --bg: #0f1117;
-    --bg2: #1a1d27;
-    --bg3: #22263a;
-    --text: #f1f5f9;
-    --text2: #94a3b8;
-    --border: rgba(255,255,255,0.08);
-    --accent: #4ade80;
-  }
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.logo{font-size:1.1rem;font-weight:700;color:var(--green);letter-spacing:-0.02em}
+.logo span{color:var(--text2);font-weight:400}
+nav{display:flex;gap:1.5rem}
+nav a{color:var(--text2);font-size:0.9rem;transition:color 0.2s}
+nav a:hover{color:var(--green)}
 
-  body {
-    font-family: 'Outfit', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    min-height: 100vh;
-  }
+.hero{padding:5rem 2rem 4rem;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(74,222,128,0.07) 0%,transparent 65%);border-bottom:1px solid var(--border)}
+.hero-tag{display:inline-block;background:rgba(74,222,128,0.12);color:var(--green);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:999px;border:1px solid rgba(74,222,128,0.25);margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-0.04em;line-height:1.15;margin-bottom:1rem}
+.hero h1 span{color:var(--green)}
+.hero p{color:var(--text2);font-size:1.05rem;max-width:500px;margin:0 auto 2rem}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--green);color:#0f1117;font-weight:700;font-size:0.9rem;padding:0.65rem 1.4rem;border-radius:8px;transition:background 0.2s,transform 0.15s}
+.btn-primary:hover{background:#86efac;transform:translateY(-1px)}
+.btn-secondary{background:var(--bg3);color:var(--text);font-weight:500;font-size:0.9rem;padding:0.65rem 1.4rem;border-radius:8px;border:1px solid var(--border);transition:border-color 0.2s}
+.btn-secondary:hover{border-color:rgba(74,222,128,0.3)}
 
-  header {
-    background: var(--bg2);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
+.section{max-width:1100px;margin:0 auto;padding:4rem 2rem}
+.section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2rem}
+.section-header h2{font-size:1.4rem;font-weight:700;letter-spacing:-0.02em}
+.section-header a{color:var(--text2);font-size:0.875rem;transition:color 0.2s}
+.section-header a:hover{color:var(--green)}
 
-  .logo {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: -0.02em;
-  }
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;display:flex;flex-direction:column}
+.card:hover{border-color:rgba(74,222,128,0.25);transform:translateY(-3px)}
+.card-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:var(--bg3)}
+.card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column}
+.card-tag{display:inline-block;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--green);margin-bottom:0.5rem}
+.card h3{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em;margin-bottom:0.5rem;line-height:1.4}
+.card p{color:var(--text2);font-size:0.875rem;line-height:1.6;flex:1}
+.card-footer{padding:1rem 1.25rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.card-meta{font-size:0.75rem;color:var(--text2)}
+.card-link{font-size:0.8rem;font-weight:600;color:var(--green);transition:opacity 0.2s}
+.card-link:hover{opacity:0.8}
 
-  .logo span { color: var(--text2); font-weight: 400; }
+.categories{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+.cat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.2rem;display:flex;align-items:center;gap:1rem;transition:border-color 0.2s,transform 0.2s;cursor:pointer}
+.cat-card:hover{border-color:rgba(74,222,128,0.3);transform:translateY(-2px)}
+.cat-icon{font-size:1.8rem;flex-shrink:0}
+.cat-name{font-weight:600;font-size:0.95rem}
+.cat-count{font-size:0.75rem;color:var(--text2)}
 
-  nav a {
-    color: var(--text2);
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-left: 1.5rem;
-    transition: color 0.2s;
-  }
+.affiliate-banner{background:linear-gradient(135deg,#0d2218,#1a3a28);border:1px solid rgba(74,222,128,0.2);border-radius:16px;padding:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin:2rem 0}
+.affiliate-banner h3{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:0.4rem}
+.affiliate-banner p{color:var(--text2);font-size:0.95rem;max-width:500px}
+.affiliate-banner .btn-primary{white-space:nowrap;flex-shrink:0}
 
-  nav a:hover { color: var(--accent); }
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2rem;margin-top:4rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--text2);font-size:0.85rem;transition:color 0.2s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{color:var(--text2);font-size:0.8rem}
 
-  .hero {
-    background: linear-gradient(135deg, #0f1117 0%, #1a2a1a 50%, #0f1117 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 4rem 2rem 3rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .tag {
-    display: inline-block;
-    background: var(--green-light);
-    color: var(--green-dark);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-    margin-bottom: 1.2rem;
-  }
-
-  .hero h1 {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero h1 span { color: var(--accent); }
-
-  .hero p {
-    color: var(--text2);
-    font-size: 1.05rem;
-    max-width: 540px;
-    margin: 0 auto 2rem;
-  }
-
-  .meta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    font-size: 0.85rem;
-    color: var(--text2);
-  }
-
-  .meta span { display: flex; align-items: center; gap: 0.4rem; }
-
-  .container {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-  }
-
-  .intro {
-    font-size: 1.1rem;
-    color: var(--text2);
-    border-left: 3px solid var(--accent);
-    padding-left: 1.2rem;
-    margin-bottom: 3rem;
-  }
-
-  .seed-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-
-  .seed-card:hover {
-    border-color: rgba(74,222,128,0.3);
-    transform: translateY(-2px);
-  }
-
-  .seed-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .seed-number {
-    background: var(--accent);
-    color: #0f1117;
-    font-size: 0.75rem;
-    font-weight: 700;
-    width: 28px;
-    height: 28px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .seed-title-group { flex: 1; }
-
-  .seed-badge {
-    background: var(--bg3);
-    color: var(--text2);
-    font-size: 0.72rem;
-    font-weight: 500;
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .seed-card h2 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    margin-bottom: 0.2rem;
-  }
-
-  .seed-label {
-    font-size: 0.8rem;
-    color: var(--accent);
-    font-weight: 500;
-  }
-
-  .seed-code {
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 0.6rem 1rem;
-    margin: 0.8rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .seed-code code {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
-    color: var(--accent);
-  }
-
-  .copy-btn {
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--text2);
-    font-size: 0.75rem;
-    padding: 0.25rem 0.6rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-family: 'Outfit', sans-serif;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-
-  .copy-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-
-  .seed-desc {
-    color: var(--text2);
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-
-  .section-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin: 3rem 0 1.2rem;
-    color: var(--text);
-  }
-
-  .how-to {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .how-to ol {
-    padding-left: 1.2rem;
-    color: var(--text2);
-  }
-
-  .how-to li {
-    padding: 0.4rem 0;
-    font-size: 0.95rem;
-  }
-
-  .how-to li strong { color: var(--text); }
-
-  .affiliate-box {
-    background: linear-gradient(135deg, #0d2218, #1a3a28);
-    border: 1px solid rgba(74,222,128,0.25);
-    border-radius: 12px;
-    padding: 1.8rem;
-    margin: 2.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .affiliate-icon {
-    font-size: 2.5rem;
-    flex-shrink: 0;
-  }
-
-  .affiliate-box h3 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-  }
-
-  .affiliate-box p {
-    color: var(--text2);
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .affiliate-btn {
-    display: inline-block;
-    background: var(--accent);
-    color: #0f1117;
-    font-weight: 700;
-    font-size: 0.875rem;
-    padding: 0.55rem 1.2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-
-  .affiliate-btn:hover {
-    background: #86efac;
-    transform: translateY(-1px);
-  }
-
-  .conclusion {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    color: var(--text2);
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .tag-pill {
-    background: var(--bg3);
-    color: var(--text2);
-    font-size: 0.8rem;
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-  }
-
-  footer {
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    padding: 2rem;
-    text-align: center;
-    color: var(--text2);
-    font-size: 0.85rem;
-  }
-
-  footer a { color: var(--accent); text-decoration: none; }
-
-  @media (max-width: 600px) {
-    .hero { padding: 3rem 1.2rem 2rem; }
-    .container { padding: 2rem 1.2rem; }
-    .affiliate-box { flex-direction: column; gap: 1rem; }
-    .seed-header { flex-wrap: wrap; }
-  }
+@media(max-width:600px){
+  header{padding:1rem}
+  nav{gap:1rem}
+  .hero{padding:3.5rem 1.2rem 3rem}
+  .section{padding:3rem 1.2rem}
+  .affiliate-banner{padding:1.5rem}
+  .footer-inner{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Blocks<span>&</span>Biomes</div>
+  <a href="index.html" class="logo">Blocks<span>&</span>Biomes</a>
   <nav>
-    <a href="#">Seeds</a>
-    <a href="#">Mods</a>
-    <a href="#">Servers</a>
-    <a href="#">Builds</a>
+    <a href="seeds.html">Seeds</a>
+    <a href="mods.html">Mods</a>
+    <a href="servers.html">Servers</a>
   </nav>
 </header>
 
 <div class="hero">
-  <div class="tag">Seeds Guide 2026</div>
-  <h1>Best Minecraft Seeds for <span>2026</span></h1>
-  <p>Verified seeds for Java and Bedrock edition. From epic spawn locations to ancient cities and speedrun setups.</p>
-  <div class="meta">
-    <span>March 2026</span>
-    <span>7 seeds</span>
-    <span>Java and Bedrock</span>
+  <div class="hero-tag">Minecraft Guides 2026</div>
+  <h1>Your go-to guide for<br><span>everything Minecraft</span></h1>
+  <p>Seeds, mods, servers and builds. Updated regularly for Java and Bedrock edition.</p>
+  <div class="hero-btns">
+    <a href="seeds.html" class="btn-primary">Browse Seeds</a>
+    <a href="servers.html" class="btn-secondary">Best Servers</a>
   </div>
 </div>
 
-<div class="container">
-
-  <p class="intro">
-    The right seed can completely transform your Minecraft experience. We tested hundreds of worlds to bring you the best picks for every play style in 2026, all verified on version 1.21 and above.
-  </p>
-
-  <div class="seed-card">
-    <div class="seed-header">
-      <div class="seed-number">1</div>
-      <div class="seed-title-group">
-        <div class="seed-label">Best Overall</div>
-        <h2>Badlands Lake</h2>
+<div class="section">
+  <div class="section-header">
+    <h2>Latest guides</h2>
+    <a href="#">View all</a>
+  </div>
+  <div class="cards">
+    <a href="seeds.html" class="card">
+      <div class="card-img">🌍</div>
+      <div class="card-body">
+        <div class="card-tag">Seeds</div>
+        <h3>Best Minecraft Seeds for 2026</h3>
+        <p>Verified seeds for every play style -- survival, building, speedrunning and more. Works on Java and Bedrock 1.21.</p>
       </div>
-      <div class="seed-badge">Java and Bedrock</div>
-    </div>
-    <div class="seed-code">
-      <code>7598363429859286340</code>
-      <button class="copy-btn" onclick="copyText('7598363429859286340', this)">Copy</button>
-    </div>
-    <p class="seed-desc">A stunning Badlands lake right at spawn surrounded by steep terracotta cliffs. You get an exposed mineshaft, ruined portal, and lush cave all within easy reach. Perfect for players who want a dramatic landscape from day one.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">
-      <div class="seed-number">2</div>
-      <div class="seed-title-group">
-        <div class="seed-label">Best for Beginners</div>
-        <h2>Village at Spawn</h2>
+      <div class="card-footer">
+        <span class="card-meta">March 2026 -- 7 seeds</span>
+        <span class="card-link">Read more</span>
       </div>
-      <div class="seed-badge">Java 1.21</div>
-    </div>
-    <div class="seed-code">
-      <code>-2905666184584101000</code>
-      <button class="copy-btn" onclick="copyText('-2905666184584101000', this)">Copy</button>
-    </div>
-    <p class="seed-desc">Spawn in a Snowy Taiga with a village, mineshaft, and Trial Chamber all close by. One of the most practical seeds for new players who want food, shelter, and loot without the grind.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">
-      <div class="seed-number">3</div>
-      <div class="seed-title-group">
-        <div class="seed-label">Best for Survival</div>
-        <h2>Three Villages</h2>
+    </a>
+    <a href="mods.html" class="card">
+      <div class="card-img">🔧</div>
+      <div class="card-body">
+        <div class="card-tag">Mods</div>
+        <h3>Best Minecraft Mods for Beginners 2026</h3>
+        <p>The easiest mods to install that actually improve your game. No complex setup, just better Minecraft.</p>
       </div>
-      <div class="seed-badge">Bedrock</div>
-    </div>
-    <div class="seed-code">
-      <code>-6849711121275647141</code>
-      <button class="copy-btn" onclick="copyText('-6849711121275647141', this)">Copy</button>
-    </div>
-    <p class="seed-desc">Spawn in a Savanna biome with three villages close together. Perfect for fast trading, resource gathering, and building a connected settlement early in the game.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">
-      <div class="seed-number">4</div>
-      <div class="seed-title-group">
-        <div class="seed-label">Best for Exploration</div>
-        <h2>Cherry Grove Village</h2>
+      <div class="card-footer">
+        <span class="card-meta">March 2026 -- 8 mods</span>
+        <span class="card-link">Read more</span>
       </div>
-      <div class="seed-badge">Java and Bedrock</div>
-    </div>
-    <div class="seed-code">
-      <code>69420018030897796</code>
-      <button class="copy-btn" onclick="copyText('69420018030897796', this)">Copy</button>
-    </div>
-    <p class="seed-desc">A gorgeous lake village sitting just below a large cherry blossom biome. Nearby you will find a ruined portal, trial chamber, and ocean ruins for endless exploration.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">
-      <div class="seed-number">5</div>
-      <div class="seed-title-group">
-        <div class="seed-label">Best for Builders</div>
-        <h2>Canyon Capital</h2>
+    </a>
+    <a href="servers.html" class="card">
+      <div class="card-img">🖥️</div>
+      <div class="card-body">
+        <div class="card-tag">Servers</div>
+        <h3>Best Minecraft Servers 2026</h3>
+        <p>From Hypixel to hidden gems -- the best servers for survival, minigames, PvP and creative mode right now.</p>
       </div>
-      <div class="seed-badge">Bedrock</div>
-    </div>
-    <div class="seed-code">
-      <code>CanyonCapital</code>
-      <button class="copy-btn" onclick="copyText('CanyonCapital', this)">Copy</button>
-    </div>
-    <p class="seed-desc">Spawn on the rim of a massive canyon with natural bridges connecting the plateaus. Architects and creative players will love the dramatic landscape for mega builds.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">
-      <div class="seed-number">6</div>
-      <div class="seed-title-group">
-        <div class="seed-label">Best Cave Seed</div>
-        <h2>Ancient City Spawn</h2>
+      <div class="card-footer">
+        <span class="card-meta">March 2026 -- 7 servers</span>
+        <span class="card-link">Read more</span>
       </div>
-      <div class="seed-badge">Java and Bedrock</div>
-    </div>
-    <div class="seed-code">
-      <code>2482490754905255652</code>
-      <button class="copy-btn" onclick="copyText('2482490754905255652', this)">Copy</button>
-    </div>
-    <p class="seed-desc">Spawn at y-level -49 with natural light illuminating an Ancient City around you, complete with diamonds nearby. Just stay quiet or you will wake the Warden.</p>
+    </a>
   </div>
+</div>
 
-  <div class="seed-card">
-    <div class="seed-header">
-      <div class="seed-number">7</div>
-      <div class="seed-title-group">
-        <div class="seed-label">Best for Speedrunning</div>
-        <h2>Desert Speedrun</h2>
-      </div>
-      <div class="seed-badge">Java 1.21</div>
-    </div>
-    <div class="seed-code">
-      <code>-5141000884917439951</code>
-      <button class="copy-btn" onclick="copyText('-5141000884917439951', this)">Copy</button>
-    </div>
-    <p class="seed-desc">A fast desert start with a village, temple loot, and Trial Chamber all on a simple route from spawn. Break the pressure plate in the temple first to avoid the TNT trap.</p>
+<div class="section" style="padding-top:0">
+  <div class="section-header">
+    <h2>Browse by category</h2>
   </div>
-
-  <h2 class="section-title">How to use these seeds</h2>
-
-  <div class="how-to">
-    <ol>
-      <li>Open Minecraft and click <strong>Create New World</strong></li>
-      <li>Go to <strong>More World Options</strong> on Java or <strong>Advanced</strong> on Bedrock</li>
-      <li>Find the <strong>Seed</strong> field and paste the seed number</li>
-      <li>Click <strong>Create World</strong> and start your adventure</li>
-    </ol>
+  <div class="categories">
+    <a href="seeds.html" class="cat-card">
+      <div class="cat-icon">🌍</div>
+      <div><div class="cat-name">Seeds</div><div class="cat-count">Java and Bedrock</div></div>
+    </a>
+    <a href="mods.html" class="cat-card">
+      <div class="cat-icon">🔧</div>
+      <div><div class="cat-name">Mods</div><div class="cat-count">Forge and Fabric</div></div>
+    </a>
+    <a href="servers.html" class="cat-card">
+      <div class="cat-icon">🖥️</div>
+      <div><div class="cat-name">Servers</div><div class="cat-count">Survival, PvP, Creative</div></div>
+    </a>
+    <div class="cat-card">
+      <div class="cat-icon">🏗️</div>
+      <div><div class="cat-name">Builds</div><div class="cat-count">Coming soon</div></div>
+    </div>
   </div>
+</div>
 
-  <div class="affiliate-box">
-    <div class="affiliate-icon">🖥️</div>
+<div class="section" style="padding-top:0">
+  <div class="affiliate-banner">
     <div>
-      <h3>Want to play these seeds with friends?</h3>
-      <p>Apex Hosting offers Minecraft server hosting from just 3 euros per month. One-click setup, no technical knowledge needed, and your server is online in minutes.</p>
-      <a href="https://billing.apexminecrafthosting.com/aff.php?aff=16632" class="affiliate-btn" target="_blank">Get started with Apex Hosting</a>
+      <h3>Play with friends on your own server</h3>
+      <p>Apex Hosting offers Minecraft servers from just 3 euros per month. One-click setup, no technical knowledge needed, and your server is live in minutes.</p>
     </div>
+    <a href="https://billing.apexminecrafthosting.com/aff.php?aff=16632" class="btn-primary" target="_blank">Get started with Apex Hosting</a>
   </div>
-
-  <h2 class="section-title">Final thoughts</h2>
-
-  <div class="conclusion">
-    These seeds cover every play style, from beginners looking for a headstart to speedrunners chasing world records. Bookmark this page as we update it with every major Minecraft update. Found a seed we missed? Drop it in the comments below.
-  </div>
-
-  <div class="tags">
-    <span class="tag-pill">minecraft</span>
-    <span class="tag-pill">minecraft seeds</span>
-    <span class="tag-pill">java edition</span>
-    <span class="tag-pill">bedrock edition</span>
-    <span class="tag-pill">gaming</span>
-    <span class="tag-pill">2026</span>
-  </div>
-
 </div>
 
 <footer>
-  <p>Blocks and Biomes &mdash; Your Minecraft guide. <a href="#">More articles</a></p>
+  <div class="footer-inner">
+    <div class="logo">Blocks<span style="color:var(--text2);font-weight:400">&</span>Biomes</div>
+    <div class="footer-links">
+      <a href="seeds.html">Seeds</a>
+      <a href="mods.html">Mods</a>
+      <a href="servers.html">Servers</a>
+    </div>
+    <div class="footer-copy">2026 Blocks and Biomes. Not affiliated with Mojang.</div>
+  </div>
 </footer>
-
-<script>
-  function copyText(text, btn) {
-    navigator.clipboard.writeText(text).then(() => {
-      btn.textContent = 'Copied!';
-      btn.style.color = '#4ade80';
-      btn.style.borderColor = '#4ade80';
-      setTimeout(() => {
-        btn.textContent = 'Copy';
-        btn.style.color = '';
-        btn.style.borderColor = '';
-      }, 2000);
-    });
-  }
-</script>
 
 </body>
 </html>
