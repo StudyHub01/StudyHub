@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Make an Iron Farm in Minecraft 1.21 (330+ Iron Per Hour) | Blocks and Biomes</title>
+<meta name="description" content="Step by step guide to building an easy iron farm in Minecraft 1.21. Works on Java and Bedrock. Produces 330+ iron per hour with just 3 villagers and a zombie.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#4ade80;--bg:#0f1117;--bg2:#1a1d27;--bg3:#22263a;--text:#f1f5f9;--text2:#94a3b8;--border:rgba(255,255,255,0.08);--amber:#fbbf24;--blue:#60a5fa;--red:#f87171}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.logo{font-size:1.1rem;font-weight:700;color:var(--green);letter-spacing:-0.02em}
+.logo span{color:var(--text2);font-weight:400}
+nav a{color:var(--text2);font-size:0.9rem;margin-left:1.5rem;transition:color 0.2s}
+nav a:hover{color:var(--green)}
+.hero{padding:3.5rem 2rem 2.5rem;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(74,222,128,0.07) 0%,transparent 65%);border-bottom:1px solid var(--border)}
+.tag{display:inline-block;background:rgba(74,222,128,0.12);color:var(--green);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:999px;border:1px solid rgba(74,222,128,0.25);margin-bottom:1rem}
+.hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;letter-spacing:-0.03em;line-height:1.2;margin-bottom:0.8rem}
+.hero h1 span{color:var(--green)}
+.hero p{color:var(--text2);font-size:1rem;max-width:540px;margin:0 auto 1.5rem}
+.meta{display:flex;align-items:center;justify-content:center;gap:1.5rem;font-size:0.82rem;color:var(--text2);flex-wrap:wrap}
+.container{max-width:780px;margin:0 auto;padding:3rem 2rem}
+.intro{font-size:1.05rem;color:var(--text2);border-left:3px solid var(--green);padding-left:1.2rem;margin-bottom:2.5rem;line-height:1.8}
+.section-title{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;margin:2.5rem 0 1rem}
+.materials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;margin-bottom:1.5rem}
+.material-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:0.9rem 1rem;display:flex;align-items:center;gap:0.8rem}
+.material-icon{font-size:1.4rem;flex-shrink:0}
+.material-name{font-size:0.9rem;font-weight:500}
+.material-note{font-size:0.75rem;color:var(--text2)}
+.step-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.25rem;transition:border-color 0.2s}
+.step-card:hover{border-color:rgba(74,222,128,0.2)}
+.step-header{display:flex;align-items:flex-start;gap:0.9rem;margin-bottom:0.8rem}
+.step-num{background:var(--green);color:#0f1117;font-size:0.8rem;font-weight:700;min-width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.step-card h2{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em;line-height:1.4}
+.step-desc{color:var(--text2);font-size:0.92rem;line-height:1.75}
+.step-desc ul{padding-left:1.2rem;margin-top:0.5rem}
+.step-desc li{padding:0.2rem 0}
+.tip-box{background:rgba(74,222,128,0.06);border:1px solid rgba(74,222,128,0.2);border-radius:12px;padding:1.2rem 1.4rem;margin:1.5rem 0}
+.tip-box p{color:var(--text2);font-size:0.9rem}
+.tip-box strong{color:var(--green)}
+.warn-box{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);border-radius:12px;padding:1.2rem 1.4rem;margin:1.5rem 0}
+.warn-box p{color:var(--text2);font-size:0.9rem}
+.warn-box strong{color:var(--amber)}
+.diff-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.88rem}
+.diff-table th{background:var(--bg3);color:var(--text);font-weight:600;padding:0.7rem 1rem;text-align:left;border:1px solid var(--border)}
+.diff-table td{padding:0.7rem 1rem;border:1px solid var(--border);color:var(--text2);vertical-align:top}
+.diff-table tr:hover td{background:rgba(255,255,255,0.02)}
+.yes{color:var(--green);font-weight:500}
+.no{color:var(--red);font-weight:500}
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;margin-bottom:0.8rem}
+.faq-item h3{font-size:0.95rem;font-weight:600;margin-bottom:0.5rem}
+.faq-item p{color:var(--text2);font-size:0.88rem;line-height:1.6}
+.affiliate-box{background:linear-gradient(135deg,#0d2218,#1a3a28);border:1px solid rgba(74,222,128,0.25);border-radius:12px;padding:1.8rem;margin:2.5rem 0;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.affiliate-box h3{font-size:1rem;font-weight:600;margin-bottom:0.3rem}
+.affiliate-box p{color:var(--text2);font-size:0.88rem;margin-bottom:0.8rem}
+.affiliate-btn{display:inline-block;background:var(--green);color:#0f1117;font-weight:700;font-size:0.85rem;padding:0.55rem 1.2rem;border-radius:8px;transition:background 0.2s,transform 0.15s}
+.affiliate-btn:hover{background:#86efac;transform:translateY(-1px)}
+.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.related-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;transition:border-color 0.2s,transform 0.2s}
+.related-card:hover{border-color:rgba(74,222,128,0.25);transform:translateY(-2px)}
+.related-tag{font-size:0.7rem;color:var(--green);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem}
+.related-card h3{font-size:0.9rem;font-weight:600;line-height:1.4}
+.conclusion{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.4rem;color:var(--text2);font-size:0.92rem;margin-bottom:1.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)}
+.tag-pill{background:var(--bg3);color:var(--text2);font-size:0.78rem;padding:0.25rem 0.7rem;border-radius:999px;border:1px solid var(--border)}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--text2);font-size:0.82rem;margin-top:2rem}
+footer a{color:var(--green)}
+@media(max-width:600px){.hero{padding:2.5rem 1.2rem 2rem}.container{padding:2rem 1.2rem}.affiliate-box{flex-direction:column}.diff-table{font-size:0.78rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">Blocks<span>&</span>Biomes</a>
+  <nav>
+    <a href="seeds.html">Seeds</a>
+    <a href="mods.html">Mods</a>
+    <a href="servers.html">Servers</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="tag">Farm Tutorial 2026</div>
+  <h1>How to Build an <span>Iron Farm</span> in Minecraft 1.21</h1>
+  <p>A simple beginner-friendly iron farm that produces 330+ iron ingots per hour. No redstone needed. Works on Java and Bedrock.</p>
+  <div class="meta">
+    <span>March 2026</span>
+    <span>Java and Bedrock</span>
+    <span>1.21 verified</span>
+    <span>330+ iron per hour</span>
+  </div>
+</div>
+
+<div class="container">
+  <p class="intro">Iron is the most useful resource in Minecraft. You need it for tools, armor, hoppers, rails, and dozens of other crafting recipes. Instead of spending hours mining, an iron farm gives you a renewable supply automatically. This guide walks you through a simple beginner-friendly design that works in Minecraft 1.21 and produces over 330 iron ingots per hour on Java Edition.</p>
+
+  <h2 class="section-title">How iron farms work</h2>
+
+  <p style="color:var(--text2);font-size:0.95rem;margin-bottom:1rem">Before building, it helps to understand the basic mechanic. Iron golems spawn naturally in villages when villagers feel threatened. When a zombie gets close enough to scare your villagers, they panic and trigger iron golem spawns more frequently. The farm traps villagers and a zombie together so the villagers are constantly scared, maximising the spawn rate. The golems then fall into a lava kill chamber and drop iron ingots into a hopper and chest below.</p>
+
+  <p style="color:var(--text2);font-size:0.95rem;margin-bottom:1.5rem">The key requirements are: at least 3 villagers with beds linked to them, a zombie to scare them, a spawning platform for the golems, and a kill chamber to collect the drops. That is the entire mechanic -- everything else in this guide is just the practical steps to set it up.</p>
+
+  <div class="tip-box">
+    <p><strong>Java vs Bedrock:</strong> On Java Edition you only need 3 villagers. On Bedrock Edition you need at least 10 villagers and a larger spawning platform. The rest of the steps are similar. A dedicated Bedrock section is at the bottom of this guide.</p>
+  </div>
+
+  <h2 class="section-title">What you need</h2>
+
+  <div class="materials-grid">
+    <div class="material-item">
+      <div class="material-icon">🛏️</div>
+      <div><div class="material-name">3 beds</div><div class="material-note">Any colour works</div></div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🧱</div>
+      <div><div class="material-name">Building blocks</div><div class="material-note">Any solid block</div></div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🪣</div>
+      <div><div class="material-name">1 lava bucket</div><div class="material-note">For the kill chamber</div></div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🪣</div>
+      <div><div class="material-name">2 water buckets</div><div class="material-note">To guide the golems</div></div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">📦</div>
+      <div><div class="material-name">1 chest</div><div class="material-note">For iron collection</div></div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🔩</div>
+      <div><div class="material-name">1 hopper</div><div class="material-note">Feeds drops into chest</div></div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🚣</div>
+      <div><div class="material-name">1 boat</div><div class="material-note">To trap the zombie</div></div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🧟</div>
+      <div><div class="material-name">1 zombie</div><div class="material-note">To scare villagers</div></div>
+    </div>
+    <div class="material-item">
+      <div class="material-icon">🧑‍🌾</div>
+      <div><div class="material-name">3 villagers</div><div class="material-note">From a nearby village</div></div>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <p><strong>Important:</strong> Build this farm at least 80 blocks away from any existing village. If you build it too close, the villagers might link to the nearby village instead of your farm's beds, and the farm will not work.</p>
+  </div>
+
+  <h2 class="section-title">Step by step build guide</h2>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <h2>Find a flat area and dig the pit</h2>
+    </div>
+    <p class="step-desc">Find a flat area at least 80 blocks from any village. Dig a 3-block wide channel that is 7 blocks deep. This channel will house the villager chamber, the zombie chamber, and the kill area underground. Keeping everything underground makes the farm compact and keeps the villagers safe from other mobs wandering in from outside.</p>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <h2>Build the villager chamber</h2>
+    </div>
+    <p class="step-desc">At the bottom of your pit, dig out a 3x3x3 room. This is where your 3 villagers will sleep. Place 3 beds inside this room -- the villagers need to be able to pathfind to and sleep in the beds for the farm to work. Leave a gap at the top so golems can see the villagers and the villagers can see the zombie in the next chamber. The beds need to be fully placed (both foot and head of the bed) inside the chamber.</p>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <h2>Build the zombie chamber</h2>
+    </div>
+    <p class="step-desc">Next to the villager chamber, dig out a small room for the zombie. Place a boat in this room -- boats trap mobs inside them when they walk into them, which is the easiest way to contain a zombie without it escaping or burning in sunlight. The zombie chamber needs to have line of sight to the villager chamber so the villagers can see the zombie and enter a panicked state. A gap of 1 to 2 blocks between the chambers works well.</p>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <h2>Build the spawning platform</h2>
+    </div>
+    <p class="step-desc">Above the villager chamber, build a flat spawning platform. Iron golems spawn in a 16x6x16 area around the village center, so your platform should extend at least 8 blocks in every direction from the center of the beds. Keep the platform flat with no obstructions -- golems need a solid block underneath and 2 blocks of empty space above them to spawn. The platform should be level with or just above the top of the villager bunker.</p>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">5</div>
+      <h2>Build the kill chamber and collection system</h2>
+    </div>
+    <p class="step-desc">Build a channel or funnel below the spawning platform that leads golems into a small kill area. Use water streams to push the golems towards a 1-block wide drop point. At the bottom, place a hopper connected to a chest, then place a single lava block above the hopper -- the lava kills the golems and the hopper collects the dropped iron ingots automatically. The golems drop 3 to 5 iron ingots and 0 to 2 poppies when killed.</p>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">6</div>
+      <h2>Add the villagers</h2>
+    </div>
+    <p class="step-desc">Lead 3 villagers from a nearby village to your farm using a boat or by luring them. Do not add the zombie yet -- if the zombie is already there, the villagers will panic and refuse to enter the farm or link to the beds. Once all 3 villagers are inside and have linked to the beds (you will see green particles when they do), you can move on to the next step. Villagers usually link to beds at night, so wait until nightfall if they have not linked yet.</p>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">7</div>
+      <h2>Add the zombie</h2>
+    </div>
+    <p class="step-desc">Now lure a zombie from the surface into the zombie chamber. The easiest method is to wait until night, find a zombie, and lead it down into the farm while wearing armour. Once it walks near the boat it will get trapped inside. Seal the zombie chamber so it cannot escape. The zombie must be protected from sunlight -- if the chamber is underground it is safe. If any part is exposed to the sky, place a roof over the zombie area.</p>
+  </div>
+
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num">8</div>
+      <h2>Test the farm</h2>
+    </div>
+    <p class="step-desc">Once the zombie is in place, the villagers should begin panicking (you will hear villager distress sounds). Within a minute or two, iron golems should start spawning on the platform above. They will be pushed by the water streams into the kill area, killed by the lava, and iron ingots will collect in the chest. Stay within 128 blocks of the farm for it to remain active -- if you walk too far away the chunks unload and the farm stops producing.</p>
+  </div>
+
+  <div class="tip-box">
+    <p><strong>Pro tip:</strong> Without a zombie, the farm still works but produces significantly less iron -- around 50 to 100 ingots per hour instead of 330+. The zombie is what makes the big difference in output rate.</p>
+  </div>
+
+  <h2 class="section-title">Java vs Bedrock differences</h2>
+
+  <table class="diff-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Java Edition</th>
+        <th>Bedrock Edition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Minimum villagers needed</td>
+        <td class="yes">3 villagers</td>
+        <td class="no">10 villagers</td>
+      </tr>
+      <tr>
+        <td>Spawning platform size</td>
+        <td class="yes">Smaller (8 blocks out)</td>
+        <td class="no">Larger required</td>
+      </tr>
+      <tr>
+        <td>Zombie scaring mechanic</td>
+        <td class="yes">Works the same</td>
+        <td class="yes">Works the same</td>
+      </tr>
+      <tr>
+        <td>Boat zombie trap</td>
+        <td class="yes">Works</td>
+        <td class="yes">Works</td>
+      </tr>
+      <tr>
+        <td>Output rate</td>
+        <td>330+ per hour</td>
+        <td>Varies by design</td>
+      </tr>
+      <tr>
+        <td>Chunk loading range</td>
+        <td>128 blocks</td>
+        <td>Simulation distance setting</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-title">Troubleshooting</h2>
+
+  <div class="faq-item">
+    <h3>Golems are not spawning</h3>
+    <p>Check that your villagers have linked to the beds -- wait for nightfall and watch for green particles. Make sure the spawning platform has no solid blocks in the 2-block space above it. Also check you are within 128 blocks of the farm. If villagers have not linked to beds, try breaking and replacing the beds.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Villagers are not entering the farm</h3>
+    <p>Make sure the zombie is not already in place when you are trying to get villagers in. The zombie's presence causes villagers to panic and refuse to move normally. Add villagers first, confirm they link to beds, then add the zombie.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>The zombie keeps dying</h3>
+    <p>Your zombie chamber is likely exposed to sunlight. Make sure the entire zombie area has a solid roof above it. Alternatively, give the zombie a helmet -- a zombie wearing any helmet will not burn in sunlight. You can drop a helmet near it and it will pick it up automatically.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Iron ingots are not collecting in the chest</h3>
+    <p>Check that the hopper is connected to the chest correctly -- the hopper should point into the chest, not just sit next to it. To connect a hopper to a chest, crouch and right-click the chest while placing the hopper. The hopper input should face upward to catch drops falling from above.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Farm is too slow or stopped working after an update</h3>
+    <p>Check that villagers still have valid beds and have not unlinked. Minecraft updates occasionally adjust villager pathfinding which can cause them to unlink. Breaking and replacing beds usually fixes this. Also confirm your zombie is still alive and in its chamber.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Golems are spawning outside the kill area</h3>
+    <p>Your spawning platform may have blocks the golems can escape onto. Make sure the platform edges funnel golems toward the water stream. You can add fences or walls along the edges to prevent escapes. Also check that the water streams flow in the right direction toward the drop point.</p>
+  </div>
+
+  <div class="affiliate-box">
+    <div>
+      <h3>Run your iron farm on a server with friends</h3>
+      <p>Apex Hosting offers Minecraft servers from just 3 euros per month. One-click setup, no technical knowledge needed, and your server is online in minutes. Share your iron farm output with your whole group.</p>
+      <a href="https://billing.apexminecrafthosting.com/aff.php?aff=16632" class="affiliate-btn" target="_blank">Get started with Apex Hosting</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">What to build next</h2>
+
+  <div class="related">
+    <a href="enchantments.html" class="related-card">
+      <div class="related-tag">Enchanting</div>
+      <h3>Best Minecraft Enchantments for Beginners</h3>
+    </a>
+    <a href="diamonds.html" class="related-card">
+      <div class="related-tag">Mining</div>
+      <h3>How to Find Diamonds in Minecraft 1.21</h3>
+    </a>
+    <a href="survival-tips.html" class="related-card">
+      <div class="related-tag">Survival</div>
+      <h3>10 Survival Tips Every Beginner Needs</h3>
+    </a>
+  </div>
+
+  <h2 class="section-title">Final thoughts</h2>
+  <div class="conclusion">This iron farm is one of the best early-game investments you can make in Minecraft. The materials are cheap, the build is straightforward, and the output of 330+ iron per hour means you will never need to mine iron again. Build it within your first few days and spend the time you save working on bigger projects. Once you have this running, an XP farm is the natural next step.</div>
+
+  <div class="tags">
+    <span class="tag-pill">iron farm minecraft</span>
+    <span class="tag-pill">minecraft 1.21</span>
+    <span class="tag-pill">iron farm tutorial</span>
+    <span class="tag-pill">minecraft farms</span>
+    <span class="tag-pill">java edition</span>
+    <span class="tag-pill">bedrock edition</span>
+    <span class="tag-pill">beginner guide</span>
+  </div>
+</div>
+
+<footer>Blocks and Biomes -- Your Minecraft guide. <a href="index.html">Back to home</a> -- Not affiliated with Mojang.</footer>
+</body>
+</html>
