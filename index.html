@@ -3,232 +3,310 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blocks and Biomes | Minecraft Guides, Seeds, Mods and Servers 2026</title>
-<meta name="description" content="The best Minecraft guides for 2026. Seeds, mods, servers, survival tips, diamonds, enchantments and farms for Java and Bedrock edition.">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Blocks and Biomes | Minecraft Guides, Seeds, Mods and Tutorials 2026</title>
+<meta name="description" content="The best Minecraft guides for 2026. Seeds, mods, servers, farms, survival tips and tutorials for Java and Bedrock edition. Updated regularly.">
+<link rel="stylesheet" href="style.css">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--green:#4ade80;--bg:#0f1117;--bg2:#1a1d27;--bg3:#22263a;--text:#f1f5f9;--text2:#94a3b8;--border:rgba(255,255,255,0.08)}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{text-decoration:none;color:inherit}
-header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
-.logo{font-size:1.1rem;font-weight:700;color:var(--green);letter-spacing:-0.02em}
-.logo span{color:var(--text2);font-weight:400}
-nav{display:flex;gap:1.5rem}
-nav a{color:var(--text2);font-size:0.9rem;transition:color 0.2s}
-nav a:hover{color:var(--green)}
-.hero{padding:5rem 2rem 4rem;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(74,222,128,0.07) 0%,transparent 65%);border-bottom:1px solid var(--border)}
-.hero-tag{display:inline-block;background:rgba(74,222,128,0.12);color:var(--green);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:999px;border:1px solid rgba(74,222,128,0.25);margin-bottom:1.2rem}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-0.04em;line-height:1.15;margin-bottom:1rem}
-.hero h1 span{color:var(--green)}
-.hero p{color:var(--text2);font-size:1.05rem;max-width:500px;margin:0 auto 2rem}
+.home-hero{
+  background:var(--ink);
+  color:var(--white);
+  padding:5rem 2rem 4rem;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.home-hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.015) 40px,
+    rgba(255,255,255,0.015) 41px
+  );
+}
+.home-hero-content{position:relative;z-index:1}
+.home-hero .hero-eyebrow{color:var(--green-light)}
+.home-hero .hero-eyebrow::before,.home-hero .hero-eyebrow::after{background:var(--green-light)}
+.home-hero h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(2.5rem,7vw,4rem);
+  font-weight:800;
+  letter-spacing:-0.04em;
+  line-height:1.05;
+  margin-bottom:1.2rem;
+  color:var(--white);
+}
+.home-hero h1 em{color:var(--green-light);font-style:normal}
+.home-hero p{
+  font-size:1.1rem;
+  color:rgba(255,255,255,0.65);
+  max-width:480px;
+  margin:0 auto 2.5rem;
+  font-style:italic;
+}
 .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:var(--green);color:#0f1117;font-weight:700;font-size:0.9rem;padding:0.65rem 1.4rem;border-radius:8px;transition:background 0.2s,transform 0.15s}
-.btn-primary:hover{background:#86efac;transform:translateY(-1px)}
-.btn-secondary{background:var(--bg3);color:var(--text);font-weight:500;font-size:0.9rem;padding:0.65rem 1.4rem;border-radius:8px;border:1px solid var(--border);transition:border-color 0.2s}
-.btn-secondary:hover{border-color:rgba(74,222,128,0.3)}
-.section{max-width:1100px;margin:0 auto;padding:4rem 2rem}
-.section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2rem}
-.section-header h2{font-size:1.4rem;font-weight:700;letter-spacing:-0.02em}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
-.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;display:flex;flex-direction:column}
-.card:hover{border-color:rgba(74,222,128,0.25);transform:translateY(-3px)}
-.card-img{height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:var(--bg3)}
-.card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column}
-.card-tag{display:inline-block;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--green);margin-bottom:0.5rem}
-.card h3{font-size:1rem;font-weight:600;letter-spacing:-0.01em;margin-bottom:0.5rem;line-height:1.4}
-.card p{color:var(--text2);font-size:0.85rem;line-height:1.6;flex:1}
-.card-footer{padding:0.9rem 1.25rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.card-meta{font-size:0.72rem;color:var(--text2)}
-.card-link{font-size:0.8rem;font-weight:600;color:var(--green)}
-.categories{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem}
-.cat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.1rem;display:flex;align-items:center;gap:0.9rem;transition:border-color 0.2s,transform 0.2s}
-.cat-card:hover{border-color:rgba(74,222,128,0.3);transform:translateY(-2px)}
-.cat-icon{font-size:1.6rem;flex-shrink:0}
-.cat-name{font-weight:600;font-size:0.9rem}
-.cat-count{font-size:0.72rem;color:var(--text2)}
-.affiliate-banner{background:linear-gradient(135deg,#0d2218,#1a3a28);border:1px solid rgba(74,222,128,0.2);border-radius:16px;padding:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin:2rem 0}
-.affiliate-banner h3{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:0.4rem}
-.affiliate-banner p{color:var(--text2);font-size:0.95rem;max-width:500px}
-footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2rem;margin-top:4rem}
-.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
-.footer-links a{color:var(--text2);font-size:0.85rem;transition:color 0.2s}
-.footer-links a:hover{color:var(--green)}
-.footer-copy{color:var(--text2);font-size:0.8rem}
-@media(max-width:600px){header{padding:1rem}nav{gap:1rem}.hero{padding:3.5rem 1.2rem 3rem}.section{padding:3rem 1.2rem}.affiliate-banner{padding:1.5rem;flex-direction:column}.footer-inner{flex-direction:column;text-align:center}}
+.btn-white{background:var(--white);color:var(--ink);font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:800;letter-spacing:0.02em;padding:0.7rem 1.5rem;border-radius:var(--radius);transition:all 0.15s}
+.btn-white:hover{background:var(--green-pale);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.3);font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:800;letter-spacing:0.02em;padding:0.65rem 1.4rem;border-radius:var(--radius);transition:all 0.15s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.05)}
+.home-section{max-width:1160px;margin:0 auto;padding:3.5rem 2rem}
+.home-section + .home-section{padding-top:0}
+.featured-strip{
+  background:var(--green-bg);
+  border-top:1px solid var(--green-pale);
+  border-bottom:1px solid var(--green-pale);
+  padding:1rem 2rem;
+}
+.featured-strip-inner{
+  max-width:1160px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:1.5rem;
+  flex-wrap:wrap;
+}
+.featured-strip-label{
+  font-family:'Syne',sans-serif;
+  font-size:0.7rem;
+  font-weight:700;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--green);
+  white-space:nowrap;
+}
+.featured-strip-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.featured-strip-links a{
+  font-family:'Syne',sans-serif;
+  font-size:0.78rem;
+  font-weight:700;
+  color:var(--ink2);
+  transition:color 0.15s;
+  display:flex;
+  align-items:center;
+  gap:0.3rem;
+}
+.featured-strip-links a::before{content:'→';color:var(--green-light)}
+.featured-strip-links a:hover{color:var(--green)}
+.affiliate-banner-home{
+  background:var(--green);
+  border-radius:var(--radius-lg);
+  padding:2.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  flex-wrap:wrap;
+  color:var(--white);
+  margin-top:1rem;
+}
+.affiliate-banner-home h2{
+  font-family:'Syne',sans-serif;
+  font-size:1.3rem;
+  font-weight:800;
+  letter-spacing:-0.02em;
+  margin-bottom:0.4rem;
+  color:var(--white);
+}
+.affiliate-banner-home p{color:rgba(255,255,255,0.75);font-size:0.95rem;max-width:520px;margin:0}
+@media(max-width:600px){.home-hero{padding:3.5rem 1.2rem 3rem}.home-section{padding:2.5rem 1.2rem}.affiliate-banner-home{padding:1.5rem;flex-direction:column}}
 </style>
 </head>
 <body>
 
-<header>
-  <a href="index.html" class="logo">Blocks<span>&</span>Biomes</a>
-  <nav>
+<header class="site-header">
+  <a href="index.html" class="site-logo">Blocks<span class="dot"></span>Biomes</a>
+  <nav class="site-nav">
     <a href="seeds.html">Seeds</a>
     <a href="mods.html">Mods</a>
     <a href="servers.html">Servers</a>
+    <a href="iron-farm.html">Farms</a>
   </nav>
 </header>
 
-<div class="hero">
-  <div class="hero-tag">Minecraft Guides 2026</div>
-  <h1>Your go-to guide for<br><span>everything Minecraft</span></h1>
-  <p>Seeds, mods, servers, farms, survival tips and more. Updated regularly for Java and Bedrock edition.</p>
-  <div class="hero-btns">
-    <a href="survival-tips.html" class="btn-primary">Start here</a>
-    <a href="seeds.html" class="btn-secondary">Browse Seeds</a>
+<div class="home-hero">
+  <div class="home-hero-content">
+    <div class="hero-eyebrow">Minecraft Guides 2026</div>
+    <h1>Your go-to guide for<br><em>everything Minecraft</em></h1>
+    <p>Seeds, mods, farms, survival tips and tutorials. Updated regularly for Java and Bedrock 1.21.</p>
+    <div class="hero-btns">
+      <a href="survival-tips.html" class="btn-white">Start here</a>
+      <a href="iron-farm.html" class="btn-ghost">Latest: Iron Farm Guide</a>
+    </div>
   </div>
 </div>
 
-<div class="section">
-  <div class="section-header">
-    <h2>Latest guides</h2>
+<div class="featured-strip">
+  <div class="featured-strip-inner">
+    <div class="featured-strip-label">Popular guides</div>
+    <div class="featured-strip-links">
+      <a href="diamonds.html">Find Diamonds</a>
+      <a href="enchantments.html">Best Enchantments</a>
+      <a href="iron-farm.html">Iron Farm</a>
+      <a href="seeds.html">Best Seeds</a>
+      <a href="mods.html">Best Mods</a>
+    </div>
   </div>
-  <div class="cards">
-    <a href="iron-farm.html" class="card">
-      <div class="card-img">⚙️</div>
-      <div class="card-body">
-        <div class="card-tag">Farm Tutorial</div>
-        <h3>How to Build an Iron Farm in Minecraft 1.21</h3>
-        <p>A simple beginner-friendly iron farm producing 330+ iron ingots per hour. No redstone needed. Java and Bedrock.</p>
+</div>
+
+<div class="home-section">
+  <div class="section-label">Latest guides</div>
+  <div class="home-cards">
+
+    <a href="iron-farm.html" class="home-card">
+      <div class="home-card-thumb">
+        <div class="thumb-placeholder">
+          <div class="thumb-emoji">⚙️</div>
+          <div class="thumb-instruction">Add image: Minecraft iron golem farm overview screenshot</div>
+        </div>
       </div>
-      <div class="card-footer">
-        <span class="card-meta">March 2026 -- 1.21 verified</span>
-        <span class="card-link">Read more</span>
+      <div class="home-card-body">
+        <div class="home-card-tag">Farm Tutorial</div>
+        <h3>How to Build an Iron Farm in Minecraft 1.21</h3>
+        <p>A simple beginner-friendly farm producing 330+ iron ingots per hour. No redstone required. Works on Java and Bedrock.</p>
+      </div>
+      <div class="home-card-footer">
+        <span class="home-card-meta">March 2026 -- 1.21 verified</span>
+        <span class="home-card-link">Read</span>
       </div>
     </a>
-    <a href="survival-tips.html" class="card">
-      <div class="card-img">⚔️</div>
-      <div class="card-body">
-        <div class="card-tag">Beginner Guide</div>
-        <h3>10 Survival Tips Every Beginner Needs</h3>
+
+    <a href="survival-tips.html" class="home-card">
+      <div class="home-card-thumb">
+        <div class="thumb-placeholder">
+          <div class="thumb-emoji">⚔️</div>
+          <div class="thumb-instruction">Add image: Minecraft first night shelter screenshot</div>
+        </div>
+      </div>
+      <div class="home-card-body">
+        <div class="home-card-tag">Beginner Guide</div>
+        <h3>10 Survival Tips Every Beginner Needs to Know</h3>
         <p>From your first tree punch to your first diamond set. The essential tips that separate beginners from survivors.</p>
       </div>
-      <div class="card-footer">
-        <span class="card-meta">March 2026 -- All editions</span>
-        <span class="card-link">Read more</span>
+      <div class="home-card-footer">
+        <span class="home-card-meta">March 2026 -- All editions</span>
+        <span class="home-card-link">Read</span>
       </div>
     </a>
-    <a href="diamonds.html" class="card">
-      <div class="card-img">💎</div>
-      <div class="card-body">
-        <div class="card-tag">Mining Guide</div>
+
+    <a href="diamonds.html" class="home-card">
+      <div class="home-card-thumb">
+        <div class="thumb-placeholder">
+          <div class="thumb-emoji">💎</div>
+          <div class="thumb-instruction">Add image: Diamond ore at Y -59 in a cave screenshot</div>
+        </div>
+      </div>
+      <div class="home-card-body">
+        <div class="home-card-tag">Mining Guide</div>
         <h3>How to Find Diamonds in Minecraft 1.21</h3>
-        <p>The exact Y-levels, mining methods, and pro tips to fill your chest with diamonds fast. Java and Bedrock verified.</p>
+        <p>The exact Y-levels, best mining methods, and pro tips to fill your chest with diamonds fast.</p>
       </div>
-      <div class="card-footer">
-        <span class="card-meta">March 2026 -- 1.21 verified</span>
-        <span class="card-link">Read more</span>
-      </div>
-    </a>
-    <a href="enchantments.html" class="card">
-      <div class="card-img">✨</div>
-      <div class="card-body">
-        <div class="card-tag">Enchanting Guide</div>
-        <h3>Best Minecraft Enchantments for Beginners</h3>
-        <p>Mending, Fortune, Protection and more. What they do, how to get them, and what to prioritize first.</p>
-      </div>
-      <div class="card-footer">
-        <span class="card-meta">March 2026 -- Java and Bedrock</span>
-        <span class="card-link">Read more</span>
+      <div class="home-card-footer">
+        <span class="home-card-meta">March 2026 -- 1.21 verified</span>
+        <span class="home-card-link">Read</span>
       </div>
     </a>
-    <a href="seeds.html" class="card">
-      <div class="card-img">🌍</div>
-      <div class="card-body">
-        <div class="card-tag">Seeds</div>
-        <h3>Best Minecraft Seeds for 2026</h3>
-        <p>Verified seeds for every play style -- survival, building, speedrunning and more. Java and Bedrock 1.21.</p>
+
+    <a href="enchantments.html" class="home-card">
+      <div class="home-card-thumb">
+        <div class="thumb-placeholder">
+          <div class="thumb-emoji">✨</div>
+          <div class="thumb-instruction">Add image: Minecraft enchanting table with bookshelves screenshot</div>
+        </div>
       </div>
-      <div class="card-footer">
-        <span class="card-meta">March 2026 -- 7 seeds</span>
-        <span class="card-link">Read more</span>
+      <div class="home-card-body">
+        <div class="home-card-tag">Enchanting Guide</div>
+        <h3>Best Minecraft Enchantments for Beginners 2026</h3>
+        <p>Mending, Fortune, Protection and more. What to get first, how to get it, and why it matters.</p>
+      </div>
+      <div class="home-card-footer">
+        <span class="home-card-meta">March 2026 -- Java and Bedrock</span>
+        <span class="home-card-link">Read</span>
       </div>
     </a>
-    <a href="mods.html" class="card">
-      <div class="card-img">🔧</div>
-      <div class="card-body">
-        <div class="card-tag">Mods</div>
+
+    <a href="seeds.html" class="home-card">
+      <div class="home-card-thumb">
+        <div class="thumb-placeholder">
+          <div class="thumb-emoji">🌍</div>
+          <div class="thumb-instruction">Add image: Minecraft Badlands biome landscape screenshot</div>
+        </div>
+      </div>
+      <div class="home-card-body">
+        <div class="home-card-tag">Seeds</div>
+        <h3>Best Minecraft Seeds for 2026 (Java and Bedrock)</h3>
+        <p>Verified seeds for survival, building, speedrunning and exploration. All tested on version 1.21.</p>
+      </div>
+      <div class="home-card-footer">
+        <span class="home-card-meta">March 2026 -- 7 seeds</span>
+        <span class="home-card-link">Read</span>
+      </div>
+    </a>
+
+    <a href="mods.html" class="home-card">
+      <div class="home-card-thumb">
+        <div class="thumb-placeholder">
+          <div class="thumb-emoji">🔧</div>
+          <div class="thumb-instruction">Add image: Minecraft with Sodium mod showing FPS counter screenshot</div>
+        </div>
+      </div>
+      <div class="home-card-body">
+        <div class="home-card-tag">Mods</div>
         <h3>Best Minecraft Mods for Beginners 2026</h3>
-        <p>The easiest mods to install that actually improve your game. No complex setup, just better Minecraft.</p>
+        <p>The easiest mods to install that genuinely improve your game. No complex setup required.</p>
       </div>
-      <div class="card-footer">
-        <span class="card-meta">March 2026 -- 8 mods</span>
-        <span class="card-link">Read more</span>
-      </div>
-    </a>
-    <a href="servers.html" class="card">
-      <div class="card-img">🖥️</div>
-      <div class="card-body">
-        <div class="card-tag">Servers</div>
-        <h3>Best Minecraft Servers 2026</h3>
-        <p>From Hypixel to hidden gems -- the best servers for survival, minigames, PvP and creative right now.</p>
-      </div>
-      <div class="card-footer">
-        <span class="card-meta">March 2026 -- 7 servers</span>
-        <span class="card-link">Read more</span>
+      <div class="home-card-footer">
+        <span class="home-card-meta">March 2026 -- 8 mods</span>
+        <span class="home-card-link">Read</span>
       </div>
     </a>
+
+    <a href="servers.html" class="home-card">
+      <div class="home-card-thumb">
+        <div class="thumb-placeholder">
+          <div class="thumb-emoji">🖥️</div>
+          <div class="thumb-instruction">Add image: Hypixel server lobby screenshot</div>
+        </div>
+      </div>
+      <div class="home-card-body">
+        <div class="home-card-tag">Servers</div>
+        <h3>Best Minecraft Servers 2026 (with IPs)</h3>
+        <p>From Hypixel to hidden gems -- the best servers for survival, minigames, PvP and creative.</p>
+      </div>
+      <div class="home-card-footer">
+        <span class="home-card-meta">March 2026 -- 7 servers</span>
+        <span class="home-card-link">Read</span>
+      </div>
+    </a>
+
   </div>
 </div>
 
-<div class="section" style="padding-top:0">
-  <div class="section-header">
-    <h2>Browse by category</h2>
-  </div>
-  <div class="categories">
-    <a href="seeds.html" class="cat-card">
-      <div class="cat-icon">🌍</div>
-      <div><div class="cat-name">Seeds</div><div class="cat-count">Java and Bedrock</div></div>
-    </a>
-    <a href="mods.html" class="cat-card">
-      <div class="cat-icon">🔧</div>
-      <div><div class="cat-name">Mods</div><div class="cat-count">Forge and Fabric</div></div>
-    </a>
-    <a href="servers.html" class="cat-card">
-      <div class="cat-icon">🖥️</div>
-      <div><div class="cat-name">Servers</div><div class="cat-count">Survival, PvP, Creative</div></div>
-    </a>
-    <a href="survival-tips.html" class="cat-card">
-      <div class="cat-icon">⚔️</div>
-      <div><div class="cat-name">Survival</div><div class="cat-count">Beginner guides</div></div>
-    </a>
-    <a href="diamonds.html" class="cat-card">
-      <div class="cat-icon">💎</div>
-      <div><div class="cat-name">Mining</div><div class="cat-count">Diamonds and ores</div></div>
-    </a>
-    <a href="enchantments.html" class="cat-card">
-      <div class="cat-icon">✨</div>
-      <div><div class="cat-name">Enchanting</div><div class="cat-count">Best enchantments</div></div>
-    </a>
-    <a href="iron-farm.html" class="cat-card">
-      <div class="cat-icon">⚙️</div>
-      <div><div class="cat-name">Farms</div><div class="cat-count">Iron, XP and more</div></div>
-    </a>
-  </div>
-</div>
-
-<div class="section" style="padding-top:0">
-  <div class="affiliate-banner">
+<div class="home-section">
+  <div class="affiliate-banner-home">
     <div>
-      <h3>Play with friends on your own server</h3>
-      <p>Apex Hosting offers Minecraft servers from just 3 euros per month. One-click setup, no technical knowledge needed, and your server is live in minutes.</p>
+      <h2>Play these worlds with your friends</h2>
+      <p>Apex Hosting offers Minecraft servers from just 3 euros per month. One-click setup, 24/7 uptime, and your server is live in minutes. No technical knowledge needed.</p>
     </div>
-    <a href="https://billing.apexminecrafthosting.com/aff.php?aff=16632" class="btn-primary" target="_blank">Get started with Apex Hosting</a>
+    <a href="https://billing.apexminecrafthosting.com/aff.php?aff=16632" class="affiliate-btn" target="_blank">Get started with Apex Hosting</a>
   </div>
 </div>
 
-<footer>
+<footer class="site-footer">
   <div class="footer-inner">
-    <div class="logo">Blocks<span style="color:var(--text2);font-weight:400">&</span>Biomes</div>
+    <div class="footer-logo">Blocks and Biomes</div>
     <div class="footer-links">
       <a href="seeds.html">Seeds</a>
       <a href="mods.html">Mods</a>
       <a href="servers.html">Servers</a>
       <a href="survival-tips.html">Survival</a>
+      <a href="diamonds.html">Diamonds</a>
+      <a href="enchantments.html">Enchanting</a>
       <a href="iron-farm.html">Farms</a>
     </div>
-    <div class="footer-copy">2026 Blocks and Biomes. Not affiliated with Mojang.</div>
+    <div class="footer-copy">2026 Blocks and Biomes. Not affiliated with Mojang or Microsoft.</div>
   </div>
 </footer>
 
