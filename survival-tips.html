@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Minecraft Survival Tips Every Beginner Needs to Know | Blocks and Biomes</title>
+<meta name="description" content="The 10 most important Minecraft survival tips for beginners in 2026. From your first day to your first diamond -- everything you need to survive.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#4ade80;--bg:#0f1117;--bg2:#1a1d27;--bg3:#22263a;--text:#f1f5f9;--text2:#94a3b8;--border:rgba(255,255,255,0.08)}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.logo{font-size:1.1rem;font-weight:700;color:var(--green);letter-spacing:-0.02em}
+.logo span{color:var(--text2);font-weight:400}
+nav a{color:var(--text2);font-size:0.9rem;margin-left:1.5rem;transition:color 0.2s}
+nav a:hover{color:var(--green)}
+.hero{padding:3.5rem 2rem 2.5rem;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(74,222,128,0.07) 0%,transparent 65%);border-bottom:1px solid var(--border)}
+.tag{display:inline-block;background:rgba(74,222,128,0.12);color:var(--green);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:999px;border:1px solid rgba(74,222,128,0.25);margin-bottom:1rem}
+.hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;letter-spacing:-0.03em;line-height:1.2;margin-bottom:0.8rem}
+.hero h1 span{color:var(--green)}
+.hero p{color:var(--text2);font-size:1rem;max-width:520px;margin:0 auto 1.5rem}
+.meta{display:flex;align-items:center;justify-content:center;gap:1.5rem;font-size:0.82rem;color:var(--text2)}
+.container{max-width:780px;margin:0 auto;padding:3rem 2rem}
+.intro{font-size:1.05rem;color:var(--text2);border-left:3px solid var(--green);padding-left:1.2rem;margin-bottom:2.5rem;line-height:1.8}
+.tip-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.25rem;transition:border-color 0.2s,transform 0.2s}
+.tip-card:hover{border-color:rgba(74,222,128,0.25);transform:translateY(-2px)}
+.tip-header{display:flex;align-items:flex-start;gap:0.9rem;margin-bottom:0.8rem}
+.tip-num{background:var(--green);color:#0f1117;font-size:0.75rem;font-weight:700;width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.tip-info{flex:1}
+.tip-day{font-size:0.78rem;color:var(--green);font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
+.tip-card h2{font-size:1.1rem;font-weight:600;letter-spacing:-0.01em}
+.tip-desc{color:var(--text2);font-size:0.92rem;line-height:1.7}
+.progression{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.4rem;margin:2rem 0}
+.progression h3{font-size:1rem;font-weight:600;margin-bottom:1rem}
+.prog-steps{display:flex;align-items:center;flex-wrap:wrap;gap:0.5rem}
+.prog-step{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.4rem 0.8rem;font-size:0.82rem;color:var(--text2)}
+.prog-arrow{color:var(--text2);font-size:0.8rem}
+.prog-step.highlight{border-color:rgba(74,222,128,0.3);color:var(--green)}
+.affiliate-box{background:linear-gradient(135deg,#0d2218,#1a3a28);border:1px solid rgba(74,222,128,0.25);border-radius:12px;padding:1.8rem;margin:2.5rem 0;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.affiliate-box h3{font-size:1rem;font-weight:600;margin-bottom:0.3rem}
+.affiliate-box p{color:var(--text2);font-size:0.88rem;margin-bottom:0.8rem}
+.affiliate-btn{display:inline-block;background:var(--green);color:#0f1117;font-weight:700;font-size:0.85rem;padding:0.55rem 1.2rem;border-radius:8px;transition:background 0.2s,transform 0.15s}
+.affiliate-btn:hover{background:#86efac;transform:translateY(-1px)}
+.conclusion{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.4rem;color:var(--text2);font-size:0.92rem;margin-bottom:1.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)}
+.tag-pill{background:var(--bg3);color:var(--text2);font-size:0.78rem;padding:0.25rem 0.7rem;border-radius:999px;border:1px solid var(--border)}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--text2);font-size:0.82rem;margin-top:2rem}
+footer a{color:var(--green)}
+@media(max-width:600px){.hero{padding:2.5rem 1.2rem 2rem}.container{padding:2rem 1.2rem}.affiliate-box{flex-direction:column}.prog-steps{gap:0.3rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">Blocks<span>&</span>Biomes</a>
+  <nav>
+    <a href="seeds.html">Seeds</a>
+    <a href="mods.html">Mods</a>
+    <a href="servers.html">Servers</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="tag">Beginner Guide 2026</div>
+  <h1>10 Minecraft Survival Tips Every <span>Beginner</span> Needs</h1>
+  <p>From your first tree punch to your first diamond set -- the essential tips that separate beginners from survivors.</p>
+  <div class="meta">
+    <span>March 2026</span>
+    <span>All editions</span>
+    <span>10 tips</span>
+  </div>
+</div>
+
+<div class="container">
+  <p class="intro">Minecraft's first night kills more new players than anything else. These 10 tips cover the most common beginner mistakes and how to avoid them, in order of priority from day one.</p>
+
+  <div class="progression">
+    <h3>Tool progression -- never skip steps</h3>
+    <div class="prog-steps">
+      <div class="prog-step">Wood tools</div>
+      <div class="prog-arrow">--</div>
+      <div class="prog-step">Stone tools</div>
+      <div class="prog-arrow">--</div>
+      <div class="prog-step highlight">Iron tools</div>
+      <div class="prog-arrow">--</div>
+      <div class="prog-step highlight">Diamond tools</div>
+      <div class="prog-arrow">--</div>
+      <div class="prog-step highlight">Netherite tools</div>
+    </div>
+    <p style="color:var(--text2);font-size:0.82rem;margin-top:0.8rem">Most beginners stay on wood tools too long. Get to stone within the first 5 minutes, iron within the first day.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">1</div>
+      <div class="tip-info">
+        <div class="tip-day">First 5 minutes</div>
+        <h2>Punch trees and craft immediately</h2>
+      </div>
+    </div>
+    <p class="tip-desc">The moment you spawn, start punching the nearest tree to collect wood logs. You need at least 16 logs to start. Open your inventory, convert logs to planks, build a crafting table, and immediately craft a wooden pickaxe. Do not explore yet -- a Minecraft day lasts only about 10 real-world minutes, and you need tools and shelter before nightfall.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">2</div>
+      <div class="tip-info">
+        <div class="tip-day">First 5 minutes</div>
+        <h2>Upgrade to stone tools immediately</h2>
+      </div>
+    </div>
+    <p class="tip-desc">Wooden tools are only meant to get you to stone tools. Use your wooden pickaxe to mine 32 cobblestone blocks from any exposed rock face, then craft a full set of stone tools -- pickaxe, axe, shovel, and sword. Stone tools mine roughly twice as fast as wood and last much longer. Staying on wooden tools beyond the first few minutes slows everything down.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">3</div>
+      <div class="tip-info">
+        <div class="tip-day">Before nightfall</div>
+        <h2>Build a shelter before the sun sets</h2>
+      </div>
+    </div>
+    <p class="tip-desc">Your first shelter does not need to be impressive -- it just needs four walls, a roof, a door, and a torch inside. The easiest approach is to find a hillside and dig a small room into it. Place a door to keep mobs out and a crafting table and furnace inside. Most beginner deaths happen because players stayed outside after dark. Do not let that be you.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">4</div>
+      <div class="tip-info">
+        <div class="tip-day">Day 1</div>
+        <h2>Craft a bed and sleep through the night</h2>
+      </div>
+    </div>
+    <p class="tip-desc">You need 3 wool and 3 wood planks to craft a bed. Kill 3 sheep to get wool -- they are usually found on plains and forest biomes. Sleeping through the night skips the dangerous dark period entirely and sets your spawn point at your bed. If you die without a bed, you respawn at the world's original spawn point which could be very far from your base.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">5</div>
+      <div class="tip-info">
+        <div class="tip-day">Day 1</div>
+        <h2>Cook your food before eating it</h2>
+      </div>
+    </div>
+    <p class="tip-desc">Raw meat restores less hunger than cooked meat, and some raw food like rotten flesh causes hunger debuffs. Build a furnace from 8 cobblestone and use it to cook all your food. Cooked chicken, pork, beef and mutton restore significantly more hunger than raw. A furnace full of food is one of the best investments you can make early in the game.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">6</div>
+      <div class="tip-info">
+        <div class="tip-day">Day 2</div>
+        <h2>Get iron as fast as possible</h2>
+      </div>
+    </div>
+    <p class="tip-desc">Iron tools are dramatically better than stone in durability and speed. Iron armor is the difference between surviving your first cave and dying to the first zombie you meet. Mine at least 24 iron ore on day 2 -- enough for a full set of armor plus a pickaxe and sword. Iron is common between Y 15 and Y 232, so you do not need to go deep to find it.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">7</div>
+      <div class="tip-info">
+        <div class="tip-day">Day 2</div>
+        <h2>Place torches everywhere</h2>
+      </div>
+    </div>
+    <p class="tip-desc">Hostile mobs only spawn in darkness. Placing torches inside your base and along paths prevents creepers and zombies from spawning near you. When mining in caves, place torches every 8 to 10 blocks so you can find your way back and stop mobs from spawning behind you. Coal is common near the surface -- mine it for fuel and torches as early as possible.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">8</div>
+      <div class="tip-info">
+        <div class="tip-day">Day 3</div>
+        <h2>Find a village and start trading</h2>
+      </div>
+    </div>
+    <p class="tip-desc">Villages are one of the best early-game resources in Minecraft. They have farms with free food, chests with loot, and villagers you can trade with for emeralds and gear. Librarian villagers can sell enchanted books including Mending, which is one of the rarest and most valuable enchantments in the game. Mark your first village on a map or with a waypoint mod.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">9</div>
+      <div class="tip-info">
+        <div class="tip-day">Always</div>
+        <h2>Never dig straight down</h2>
+      </div>
+    </div>
+    <p class="tip-desc">This is the oldest rule in Minecraft and still one of the most broken by beginners. Digging straight down can drop you into a cave, a ravine, or directly into a lava pool. Always dig at a staircase angle so you can see what is below you before you fall into it. The same rule applies going up -- never dig directly upward as gravel or lava could fall on you.</p>
+  </div>
+
+  <div class="tip-card">
+    <div class="tip-header">
+      <div class="tip-num">10</div>
+      <div class="tip-info">
+        <div class="tip-day">Always</div>
+        <h2>Start a farm as soon as possible</h2>
+      </div>
+    </div>
+    <p class="tip-desc">Hunting animals for food is not sustainable long term -- animals can run out in an area. A small wheat farm gives you a renewable food source that requires almost no maintenance. You need a hoe (craft from stone or iron), seeds from breaking grass, and tilled dirt near water. Plant wheat, wait a few in-game days, and you will have bread to eat without hunting. Expand with potatoes and carrots when you find them in villages.</p>
+  </div>
+
+  <div class="affiliate-box">
+    <div>
+      <h3>Learn survival with friends on your own server</h3>
+      <p>Apex Hosting offers Minecraft servers from just 3 euros per month. One-click setup and your server is online in minutes. Perfect for playing survival with friends.</p>
+      <a href="https://billing.apexminecrafthosting.com/aff.php?aff=16632" class="affiliate-btn" target="_blank">Get started with Apex Hosting</a>
+    </div>
+  </div>
+
+  <div class="conclusion">Follow these 10 tips and your first week in Minecraft survival will go from chaotic to controlled. Get wood, get stone, get shelter, get a bed, and get iron. Everything else builds from there. The game becomes much easier once you have iron armor and a farm keeping you fed.</div>
+
+  <div class="tags">
+    <span class="tag-pill">minecraft survival</span>
+    <span class="tag-pill">beginner tips</span>
+    <span class="tag-pill">minecraft guide</span>
+    <span class="tag-pill">survival mode</span>
+    <span class="tag-pill">minecraft 2026</span>
+  </div>
+</div>
+
+<footer>Blocks and Biomes -- Your Minecraft guide. <a href="index.html">Back to home</a> -- Not affiliated with Mojang.</footer>
+</body>
+</html>

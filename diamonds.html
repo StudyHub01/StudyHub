@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Find Diamonds in Minecraft 1.21 (2026 Guide) | Blocks and Biomes</title>
+<meta name="description" content="The complete guide to finding diamonds in Minecraft 1.21. Best Y-levels, mining methods, and pro tips for Java and Bedrock edition.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#4ade80;--bg:#0f1117;--bg2:#1a1d27;--bg3:#22263a;--text:#f1f5f9;--text2:#94a3b8;--border:rgba(255,255,255,0.08);--blue:#60a5fa;--amber:#fbbf24;--red:#f87171}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.logo{font-size:1.1rem;font-weight:700;color:var(--green);letter-spacing:-0.02em}
+.logo span{color:var(--text2);font-weight:400}
+nav a{color:var(--text2);font-size:0.9rem;margin-left:1.5rem;transition:color 0.2s}
+nav a:hover{color:var(--green)}
+.hero{padding:3.5rem 2rem 2.5rem;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(74,222,128,0.07) 0%,transparent 65%);border-bottom:1px solid var(--border)}
+.tag{display:inline-block;background:rgba(74,222,128,0.12);color:var(--green);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:999px;border:1px solid rgba(74,222,128,0.25);margin-bottom:1rem}
+.hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;letter-spacing:-0.03em;line-height:1.2;margin-bottom:0.8rem}
+.hero h1 span{color:var(--green)}
+.hero p{color:var(--text2);font-size:1rem;max-width:520px;margin:0 auto 1.5rem}
+.meta{display:flex;align-items:center;justify-content:center;gap:1.5rem;font-size:0.82rem;color:var(--text2)}
+.container{max-width:780px;margin:0 auto;padding:3rem 2rem}
+.intro{font-size:1.05rem;color:var(--text2);border-left:3px solid var(--green);padding-left:1.2rem;margin-bottom:2.5rem;line-height:1.8}
+.section-title{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;margin:2.5rem 0 1rem}
+.y-level-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+.y-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.2rem;text-align:center}
+.y-card.best{border-color:rgba(74,222,128,0.35);background:rgba(74,222,128,0.05)}
+.y-card.safe{border-color:rgba(96,165,250,0.35);background:rgba(96,165,250,0.05)}
+.y-card.danger{border-color:rgba(248,113,113,0.35);background:rgba(248,113,113,0.05)}
+.y-level{font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:700;margin-bottom:0.3rem}
+.y-card.best .y-level{color:var(--green)}
+.y-card.safe .y-level{color:var(--blue)}
+.y-card.danger .y-level{color:var(--red)}
+.y-label{font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--text2);margin-bottom:0.4rem}
+.y-desc{font-size:0.82rem;color:var(--text2);line-height:1.5}
+.method-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.4rem;margin-bottom:1rem}
+.method-header{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem}
+.method-num{background:var(--green);color:#0f1117;font-size:0.75rem;font-weight:700;width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.method-card h3{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em}
+.method-card p{color:var(--text2);font-size:0.92rem;line-height:1.7}
+.tip-box{background:rgba(74,222,128,0.06);border:1px solid rgba(74,222,128,0.2);border-radius:12px;padding:1.2rem 1.4rem;margin:1.5rem 0}
+.tip-box p{color:var(--text2);font-size:0.9rem}
+.tip-box strong{color:var(--green)}
+.warn-box{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);border-radius:12px;padding:1.2rem 1.4rem;margin:1.5rem 0}
+.warn-box p{color:var(--text2);font-size:0.9rem}
+.warn-box strong{color:var(--amber)}
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;margin-bottom:0.8rem}
+.faq-item h3{font-size:0.95rem;font-weight:600;margin-bottom:0.5rem}
+.faq-item p{color:var(--text2);font-size:0.88rem;line-height:1.6}
+.affiliate-box{background:linear-gradient(135deg,#0d2218,#1a3a28);border:1px solid rgba(74,222,128,0.25);border-radius:12px;padding:1.8rem;margin:2.5rem 0;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.affiliate-box h3{font-size:1rem;font-weight:600;margin-bottom:0.3rem}
+.affiliate-box p{color:var(--text2);font-size:0.88rem;margin-bottom:0.8rem}
+.affiliate-btn{display:inline-block;background:var(--green);color:#0f1117;font-weight:700;font-size:0.85rem;padding:0.55rem 1.2rem;border-radius:8px;transition:background 0.2s,transform 0.15s}
+.affiliate-btn:hover{background:#86efac;transform:translateY(-1px)}
+.conclusion{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.4rem;color:var(--text2);font-size:0.92rem;margin-bottom:1.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)}
+.tag-pill{background:var(--bg3);color:var(--text2);font-size:0.78rem;padding:0.25rem 0.7rem;border-radius:999px;border:1px solid var(--border)}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--text2);font-size:0.82rem;margin-top:2rem}
+footer a{color:var(--green)}
+@media(max-width:600px){.hero{padding:2.5rem 1.2rem 2rem}.container{padding:2rem 1.2rem}.affiliate-box{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">Blocks<span>&</span>Biomes</a>
+  <nav>
+    <a href="seeds.html">Seeds</a>
+    <a href="mods.html">Mods</a>
+    <a href="servers.html">Servers</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="tag">Mining Guide 2026</div>
+  <h1>How to Find <span>Diamonds</span> in Minecraft 1.21</h1>
+  <p>The exact Y-levels, mining methods, and pro tips to fill your chest with diamonds fast. Works on Java and Bedrock.</p>
+  <div class="meta">
+    <span>March 2026</span>
+    <span>Java and Bedrock</span>
+    <span>1.21 verified</span>
+  </div>
+</div>
+
+<div class="container">
+  <p class="intro">Diamonds spawn below Y-level 16 in Minecraft 1.21, but knowing exactly where to mine makes a massive difference. This guide covers the verified best Y-levels, the most efficient mining methods, and tips most guides miss.</p>
+
+  <h2 class="section-title">Best Y-levels for diamonds in 1.21</h2>
+
+  <div class="y-level-grid">
+    <div class="y-card best">
+      <div class="y-label">Highest density</div>
+      <div class="y-level">Y -59</div>
+      <div class="y-desc">Maximum diamond density. Closest to bedrock where diamonds are most concentrated. More lava risk.</div>
+    </div>
+    <div class="y-card safe">
+      <div class="y-label">Recommended</div>
+      <div class="y-level">Y -53</div>
+      <div class="y-desc">One block above lava lakes at Y -54. Slightly fewer diamonds but significantly safer to mine.</div>
+    </div>
+    <div class="y-card danger">
+      <div class="y-label">Lava danger zone</div>
+      <div class="y-level">Y -54</div>
+      <div class="y-desc">Underground lava lakes generate here. Avoid this exact level. Mine one block above at Y -53.</div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <p><strong>Quick answer:</strong> Mine at Y -53 if you want to stay safe. Mine at Y -59 if you want maximum diamonds and are prepared to deal with lava. Both work well on Java and Bedrock 1.21.</p>
+  </div>
+
+  <p style="color:var(--text2);font-size:0.95rem;margin-bottom:1.5rem">Since the Caves and Cliffs update in 1.18, diamonds get more common the deeper you go. They can technically spawn anywhere below Y 16, but the real density only kicks in below Y -50. Mining above Y -50 for diamonds is a waste of time in 2026.</p>
+
+  <h2 class="section-title">Best mining methods</h2>
+
+  <div class="method-card">
+    <div class="method-header">
+      <div class="method-num">1</div>
+      <h3>Branch mining (strip mining)</h3>
+    </div>
+    <p>The most reliable method. Dig down to Y -53 or -59 using a staircase (never dig straight down -- you can fall into lava). Then dig long tunnels every 2 blocks apart. This guarantees you never miss a diamond vein between tunnels. Slower than cave exploration but much more consistent.</p>
+  </div>
+
+  <div class="method-card">
+    <div class="method-header">
+      <div class="method-num">2</div>
+      <h3>Cave exploration</h3>
+    </div>
+    <p>Since 1.18, Minecraft caves are massive and diamonds are often visible on cave walls without any digging. This is faster than branch mining when it works, but less consistent. Stick to caves below Y -50 and watch your surroundings carefully. The danger is higher due to mobs and lava, so bring strong gear before attempting this.</p>
+  </div>
+
+  <div class="method-card">
+    <div class="method-header">
+      <div class="method-num">3</div>
+      <h3>Underwater cave exploration</h3>
+    </div>
+    <p>A less-known method that works surprisingly well. Underwater caves at diamond depth have no hostile mobs (except rare drowned) and diamonds are not penalized by the air-exposure rule that affects normal caves. Bring a water breathing potion and night vision for best results. Placing a door underwater creates an air pocket you can breathe in and mine from.</p>
+  </div>
+
+  <div class="warn-box">
+    <p><strong>Important:</strong> Diamond ore is less likely to generate next to open air. This means fully open caves sometimes show fewer diamonds than branch-mined tunnels. If cave exploration is not working, switch to branch mining.</p>
+  </div>
+
+  <h2 class="section-title">Essential tips for more diamonds</h2>
+
+  <div class="faq-item">
+    <h3>Always use Fortune III on your pickaxe</h3>
+    <p>Fortune III gives you up to 4 diamonds from a single ore block instead of 1. This effectively multiplies your diamond yield by 2 to 4 times. If you do not have Fortune III yet, mine the diamond ore with Silk Touch and store the block, then break it later with Fortune III for maximum drops.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Use at least an iron pickaxe</h3>
+    <p>This is non-negotiable. Using a wooden or stone pickaxe on diamond ore drops nothing -- the ore simply breaks and disappears. You need at minimum an iron pickaxe to collect diamonds.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Always carry a water bucket</h3>
+    <p>Lava pools are common at diamond depth. A water bucket lets you instantly extinguish yourself and convert lava into obsidian to get around it safely. Never mine for diamonds without one.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Check structure loot if you only need a few diamonds</h3>
+    <p>Desert temples, shipwrecks, bastion remnants, and buried treasure chests all have a chance of containing diamonds. If you only need 1 or 2 diamonds to craft an enchanting table, exploring structures can be faster than mining.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Diamonds do not regenerate</h3>
+    <p>Once mined, diamond ore does not come back unless you reset chunks or create a new world. There is no trick or exploit to respawn diamonds -- you have to keep mining.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Biome does not affect diamond spawn rate</h3>
+    <p>Diamonds spawn based on Y-level only, not biome. You do not need to mine in a specific biome to find more diamonds. Go deep regardless of where you are on the surface.</p>
+  </div>
+
+  <div class="affiliate-box">
+    <div>
+      <h3>Want to mine diamonds with friends?</h3>
+      <p>Apex Hosting offers Minecraft servers from just 3 euros per month. One-click setup, no technical knowledge needed, and your server is live in minutes.</p>
+      <a href="https://billing.apexminecrafthosting.com/aff.php?aff=16632" class="affiliate-btn" target="_blank">Get started with Apex Hosting</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">Final thoughts</h2>
+  <div class="conclusion">Mine at Y -53 for the best balance of safety and diamonds. Use branch mining for consistency, cave exploration for speed. Always carry Fortune III and a water bucket. The rest is just time -- keep mining and the diamonds will come.</div>
+
+  <div class="tags">
+    <span class="tag-pill">minecraft diamonds</span>
+    <span class="tag-pill">how to find diamonds</span>
+    <span class="tag-pill">minecraft 1.21</span>
+    <span class="tag-pill">mining guide</span>
+    <span class="tag-pill">java edition</span>
+    <span class="tag-pill">bedrock edition</span>
+  </div>
+</div>
+
+<footer>Blocks and Biomes -- Your Minecraft guide. <a href="index.html">Back to home</a> -- Not affiliated with Mojang.</footer>
+</body>
+</html>
